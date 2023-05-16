@@ -1,0 +1,141 @@
+.main_navbar_container {
+  width: 100%;
+  height: 200px;
+}
+
+.navbar_container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar_container > .navbar_container_left {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70%;
+  align-items: center;
+  height: 100px;
+}
+
+.navbar_container > .navbar_container_right {
+  display: flex;
+  justify-content: space-evenly;
+  width: 30%;
+  height: 100px;
+  align-items: center;
+}
+
+.first_ball {
+  border-radius: 50%;
+  position: absolute;
+  width: 83px;
+  height: 83px;
+  left: 719px;
+  top: 83px;
+
+  background: radial-gradient(
+      64% 64% at 27.25% 26.5%,
+      rgba(255, 208, 208, 0.536) 0%,
+      rgba(212, 93, 93, 0.264) 59.67%,
+      rgba(167, 49, 49, 0.248) 78.59%,
+      rgba(130, 25, 25, 0.248) 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
+  backdrop-filter: blur(2px);
+}
+
+.navbar_two_items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.second_ball {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 65%;
+  top: 5px;
+  border-radius: 50%;
+  background: radial-gradient(
+      64% 64% at 27.25% 26.5%,
+      rgba(236, 208, 255, 0.64) 0%,
+      rgba(161, 93, 207, 0.24) 59.67%,
+      rgba(118, 49, 164, 0.208) 78.59%,
+      rgba(86, 24, 128, 0.232) 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  /* box-shadow: 3px 6px 27px -10px; */
+  filter: blur(5px);
+  backdrop-filter: blur(2px);
+}
+
+.navbar_logo_item_text {
+  width: 200px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 12px;
+
+  color: #e4e5ea;
+}
+
+@media (max-width: 320px) {
+  .item4,
+  .navbar_logo,
+  .navbar_logo > *,
+  .navbar_container_right,
+  .navbar_container_right > * {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  .main_navbar_container {
+    height: 60px;
+    position: relative;
+    top: 0;
+  }
+
+  .navbar_container {
+    height: 60px;
+    margin: 0;
+  }
+
+  .navbar_container_left {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    min-width: 100%;
+    max-height: 60px;
+    align-items: center;
+    margin: 0;
+  }
+
+  .second_ball {
+    position: absolute;
+    width: 259px;
+    height: 259px;
+    left: 258px;
+    top: 107px;
+    
+    background: #833AB4;
+    opacity: 0.5;
+    filter: blur(196px);
+  }
+
+  .first_ball {
+    position: absolute;
+width: 50px;
+height: 50px;
+left: -55px;
+top: 301px;
+
+background: #961A1A;
+opacity: 0.5;
+filter: blur(196px);
+  }
+}
